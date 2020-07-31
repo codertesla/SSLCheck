@@ -3,6 +3,8 @@
 Check SSL certificate status of your website with Python. 
 用 Python 检查你网站的 SSL 证书有效期及颁发机构。
 
+![Python 3.7](https://img.shields.io/badge/python-v3.7-blue)
+
 
 ## Usage
 
