@@ -32,6 +32,14 @@ Issued by: GTS CA 1O1
 ## Thanks
 This project is highly inspired by : [https://flyhigher.top/develop/755.html](https://flyhigher.top/develop/755.html)
 
+## Similar Projects
+* [SukkaW/CheckSSL](https://github.com/SukkaW/CheckSSL)
+
+## Author
+SSLCheck @[CoderTesla](https://github.com/codertesla) , Released under the MIT License.
+
+---
+
 
 ## 用法
 
@@ -66,3 +74,9 @@ Issued by: GTS CA 1O1
 本项目深受此文启发，特别鸣谢 
 [https://flyhigher.top/develop/755.html](https://flyhigher.top/develop/755.html)
 
+
+## 同类项目
+* [SukkaW/CheckSSL](https://github.com/SukkaW/CheckSSL)
+
+## 作者
+SSLCheck @[CoderTesla](https://github.com/codertesla) , 遵循 MIT 开源协议。
