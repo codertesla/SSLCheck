@@ -59,6 +59,8 @@ SSLCheck @[CoderTesla](https://github.com/codertesla) , Released under the MIT L
 
 ## 输出
 
+备注：如果系统语言为简体中文，则程序自动输出中文说明。其他情况，会输出英文说明文字。
+
 ```
 $ python3 checkSSL.py google.com
 
