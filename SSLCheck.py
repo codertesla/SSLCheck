@@ -10,7 +10,7 @@ import locale
 import sys
 
 # domains to be checked(without https) | 下方填写需要检查的域名列表，无需写https，同时支持端口号
-WEBSITELIST = ['uuatm.com','google.com','facebook.com']
+WEBSITELIST = ['baidu.com','google.com','facebook.com']
 
 # use curl to check website SSL certificate status
 def check_ssl(website):
