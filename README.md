@@ -54,6 +54,19 @@ Days left: 313 days
 Issued by: Sectigo ECC Domain Validation Secure Server CA
 ```
 
+```bash
+python3 SSLCheck.py google.com
+
+Thanks for using website SSL certificate check tool.
+
+
+Website: google.com
+Start date: 2025-03-10 08:35:59
+Expire date: 2025-06-02 08:35:58
+Days left: 64 days
+Issued by: WR2
+```
+
 ## 注意事项 | Notes
 
 - 所有域名无需添加 `https://` 前缀
