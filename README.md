@@ -1,87 +1,92 @@
-# SSL certificate Check Tool | SSL 证书检查工具
+# SSL Certificate Check Tool | SSL 证书检查工具
 
-Check SSL certificate status of your website with Python. 
-用 Python 检查你网站的 SSL 证书有效期及颁发机构。
+使用 Python 检查网站的 SSL 证书状态，包括有效期、颁发机构等信息。
+Check SSL certificate status of websites with Python, including validity period and issuer information.
 
-![Python 3.7](https://img.shields.io/badge/python-v3.7-blue) ![Python 3.8](https://img.shields.io/badge/python-v3.8-blue) ![Python 3.9](https://img.shields.io/badge/python-v3.9-blue)
+![Python 3.7+](https://img.shields.io/badge/python-v3.7%2B-blue)
 
+## 功能特点 | Features
 
+- 支持检查单个或多个网站的 SSL 证书
+- 支持自定义端口号（例如：example.com:8443）
+- 显示证书的生效时间、过期时间、剩余有效天数
+- 显示证书颁发机构信息
+- 支持中英文界面（根据系统语言自动切换）
+- 完善的错误处理和日志记录
 
-## Usage
+## 依赖要求 | Requirements
 
-### One Way
-1. Modify "WEBSITELIST" in the script
-2. Run script : ` python3 SSLCheck.py `
-
-### The Other Way (recommend)
-1. Run script with command line parameters： `python3 SSLCheck.py google.com`
-
-
-## Output 
-
+```bash
+pip3 install pyOpenSSL
 ```
-$ python3 checkSSL.py google.com
+
+## 使用方法 | Usage
+
+### 方式一：命令行参数（推荐）| Method 1: Command Line Arguments (Recommended)
+
+```bash
+# 检查单个网站 | Check single website
+python3 SSLCheck.py github.com
+
+# 检查多个网站 | Check multiple websites
+python3 SSLCheck.py github.com google.com
+
+# 检查指定端口 | Check specific port
+python3 SSLCheck.py example.com:8443
+```
+
+### 方式二：修改配置 | Method 2: Modify Configuration
+
+1. 编辑 `SSLCheck.py` 中的 `WEBSITELIST` 变量
+2. 运行程序：`python3 SSLCheck.py`
+
+## 输出示例 | Output Example
+
+```bash
+$ python3 SSLCheck.py github.com
 
 Thanks for using website SSL certificate check tool.
 
-Website: google.com
-Start date: 2020-07-07 08:04:38
-Expire date: 2020-09-29 08:04:38
-Days left: 59 days
-Issued by: GTS CA 1O1
+Website: github.com
+Start date: 2025-02-05 00:00:00
+Expire date: 2026-02-05 23:59:59
+Days left: 313 days
+Issued by: Sectigo ECC Domain Validation Secure Server CA
 ```
 
+## 注意事项 | Notes
 
-## Thanks
-This project is highly inspired by : [https://flyhigher.top/develop/755.html](https://flyhigher.top/develop/755.html)
+- 所有域名无需添加 `https://` 前缀
+- 如果需要检查特定端口，使用 `hostname:port` 格式
+- 程序会自动记录错误日志
+- 默认超时时间为 10 秒
 
-## Similar Projects
-* [SukkaW/CheckSSL](https://github.com/SukkaW/CheckSSL)
+## 错误处理 | Error Handling
 
-## Author
-SSLCheck @[CoderTesla](https://github.com/codertesla) , Released under the MIT License.
+- 程序会优雅地处理各种错误情况：
+  - 无效的域名
+  - 连接超时
+  - SSL 证书验证失败
+  - 不支持的端口
+- 所有错误都会被记录到日志中
 
----
+## 开发计划 | Roadmap
 
+- [ ] 添加证书链信息显示
+- [ ] 添加证书有效期预警功能
+- [ ] 支持导出检查结果到文件
+- [ ] 添加异步检查支持
+- [ ] 添加证书信息缓存功能
 
-## 用法
+## 作者 | Author
 
+SSLCheck @[CoderTesla](https://github.com/codertesla), Released under the MIT License.
 
-### 方式一
-1. 修改代码中顶部的 "WEBSITELIST" ，把你想检查的网站域名填进去
-2. 然后运行程序： ` python3 SSLCheck.py `
+## 致谢 | Thanks
 
+本项目受以下文章启发：
+- [https://flyhigher.top/develop/755.html](https://flyhigher.top/develop/755.html)
 
+## 相关项目 | Similar Projects
 
-### 方式二 （推荐）
-1. 带参数运行本程序： `python3 SSLCheck.py google.com`
-
-
-
-## 输出
-
-备注：如果系统语言为简体中文，则程序自动输出中文说明。其他情况，会输出英文说明文字。
-
-```
-$ python3 checkSSL.py google.com
-
-感谢使用网站 SSL 证书检查工具。
-
-Website: google.com
-Start date: 2020-07-07 08:04:38
-Expire date: 2020-09-29 08:04:38
-Days left: 59 days
-Issued by: GTS CA 1O1
-```
-
-## 特别致谢
-
-本项目深受此文启发，特别鸣谢 
-[https://flyhigher.top/develop/755.html](https://flyhigher.top/develop/755.html)
-
-
-## 同类项目
-* [SukkaW/CheckSSL](https://github.com/SukkaW/CheckSSL)
-
-## 作者
-SSLCheck @[CoderTesla](https://github.com/codertesla) , 遵循 MIT 开源协议。
+- [SukkaW/CheckSSL](https://github.com/SukkaW/CheckSSL)
