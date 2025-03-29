@@ -14,10 +14,21 @@ Check SSL certificate status of websites with Python, including validity period 
 - 支持中英文界面（根据系统语言自动切换）
 - 完善的错误处理和日志记录
 
-## 依赖要求 | Requirements
+## 安装 | Installation
 
+1. 克隆仓库 | Clone the repository
 ```bash
-pip3 install pyOpenSSL
+git clone https://github.com/codertesla/SSLCheck.git
+cd SSLCheck
+```
+
+2. 安装依赖 | Install dependencies
+```bash
+# 方式一：使用 requirements.txt（推荐）| Method 1: Using requirements.txt (Recommended)
+pip3 install -r requirements.txt
+
+# 方式二：手动安装 | Method 2: Manual installation
+pip3 install pyOpenSSL>=25.0.0 cryptography>=44.0.2 typing-extensions>=4.9.0
 ```
 
 ## 使用方法 | Usage
